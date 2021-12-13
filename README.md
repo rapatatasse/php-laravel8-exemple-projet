@@ -12,6 +12,3 @@ run :
 php artisan db:seed --class=RoleSeeder
 php artisan db:seed --class=UserSeeder
 
-pour tester action dans controler :
-        dump('Nous ici');
-        die();
