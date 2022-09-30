@@ -26,6 +26,7 @@ voir si composer est installer avec "composer -V"
 sinon l'installer
 
 activer les extensions “extension=pdo_mysql” et “extension=fileinfo” and le fichier php.ini
+en décommentant
 
 
 
