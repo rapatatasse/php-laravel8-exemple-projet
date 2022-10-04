@@ -12,7 +12,7 @@ Installer Xampp
 cloner le projet dans
 C:\xampp\htdocs\
 
-Lancer votre terminal dans le fichier php-laravel-crud et taper “code .”
+Lancer votre terminal (windows PowerShell garder le même de préférence) dans le fichier php-laravel-crud et taper “code .”
 
 lancer Xampp et start Apache, MySQL et FileZilla
 
@@ -36,7 +36,7 @@ composer update
 
 
 créer base de donnée dans php my admin exe : "php-laravel-crud"
-controller la correspondance dans .env :
+controller la correspondance dans .env (transformer le .env.exemple en .env):
 DB_DATABASE=php-laravel-crud
 
 run :  
@@ -47,3 +47,8 @@ php artisan db:seed --class=UserSeeder
 
 lancement du projet
 php artisan serve
+
+
+cours laravel 8 
+https://laravel.sillo.org/cours-laravel-8-les-donnees-migrations-et-modeles/#:~:text=Laravel%20permet%20de%20g%C3%A9rer%20les,Postgres%2C%20SQLite%20et%20SQL%20Server.
+
