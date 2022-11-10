@@ -2,13 +2,17 @@
 <div class="container">
 	<div class="row">
 		<div class="col-12 text-center pt-5">
-			<h1 class="display-one m-5">PHP Laravel Project - CRUD</h1>
-			<div class="text-left"><a href="products/create" class="btn btn-outline-primary">Add new
-				product</a></div>
+			<h1 class="display-one m-5">List Products</h1>
+			<div class="text-left">
+				@guest @else
+					<a href="products/create" class="btn btn-outline-primary">Add new product</a>
+				@endguest
+			</div>
 
 			<table class="table mt-3  text-left">
 				<thead>
 					<tr>
+						<th scope="col">Image</th>
 						<th scope="col">Product Title</th>
 						<th scope="col" class="pr-5">Price (USD)</th>
 						<th scope="col">Short Notes</th>
@@ -19,15 +23,20 @@
 				<tbody>
 					@forelse($products as $product)
 					<tr>
+						<td><img class="avatar" src='{!! $product->image !!}' alt=""></td>	
 						<td>{!! $product->title !!}</td>
 						<td class="pr-5 text-right">{!! $product->price !!}</td>
 						<td>{!! $product->short_notes !!}</td>
 						<td>{!! $product->image !!}</td>
 						<td>{!! $product->description !!}</td>
-						<td><a href="products/{!! $product->id !!}/edit"
+						<td>
+							@guest @else
+							<a href="products/{!! $product->id !!}/edit"
 							class="btn btn-outline-primary">Edit</a>
 							<button type="button" class="btn btn-outline-danger ml-1"
-								onClick='showModel({!! $product->id !!})'>Delete</button></td>
+								onClick='showModel({!! $product->id !!})'>Delete</button>
+							@endguest
+						</td>
 					</tr>
 					@empty
 					<tr>
