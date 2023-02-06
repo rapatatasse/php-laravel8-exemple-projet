@@ -3,6 +3,7 @@
 @section('content')
 
 
+
 <img class= "W-50  img-thumbnail" src="images/femme.jpg" alt=""  style="width: 18rem;">
 <h1 class="display-one mt-5">PHP Laravel Project2 - CRUD</h1>
 <p>Exemple de projet pour cours</p>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () { return view('welcome');});
+Route::get('/', function () { return view('welcome');}); //page d'acceuil pour personne non connectée
+Route::get('/home', [HomeController::class, 'index'])->middleware('App\Http\Middleware\Admin'); 
 Route::resource('products','App\Http\Controllers\ProductController');
 Route::resource('roles','App\Http\Controllers\RoleController')->middleware('App\Http\Middleware\Admin');
-Route::resource('users','App\Http\Controllers\UserController')->middleware('App\Http\Middleware\Admin');
+
+Route::resource('users','App\Http\Controllers\UserController')->middleware('App\Http\Middleware\Admin');//n'autorise que les admin a voir cette vue
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

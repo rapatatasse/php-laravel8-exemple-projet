@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-12 text-center pt-5">
-			<h1 class="display-one mt-5">PHP Laravel Project - CRUD</h1>
+			<h1 class="display-one mt-5">Create</h1>
 			<div class="text-left"><a href="/products" class="btn btn-outline-primary">Product List</a></div>
 
 			
@@ -19,24 +19,24 @@
 					<label for="body">Short Notes</label>
 					<div>
 						<textarea id="short_notes" class="form-control mb-4" name="short_notes"
-							placeholder="Enter Short Notes" rows="" required></textarea>
+							placeholder="Enter Short Notes" rows="" ></textarea>
 					</div>
 					<label for="body">image link</label>
 					<div>
 						<textarea id="image" class="form-control mb-4" name="image"
-							placeholder="Enter link image" rows="" required></textarea>
+							placeholder="Enter link image" rows="" ></textarea>
 					</div>
 					<label for="body">slug</label>
 					<div>
 						<textarea id="slug" class="form-control mb-4" name="slug"
-							placeholder="Enter slug" rows="" required></textarea>
+							placeholder="Enter slug" rows="" ></textarea>
 					</div>
 				</div>
 				<div class="control-group col-6 text-left mt-2">
 					<label for="body">Description</label>
 					<div>
 						<textarea id="description" class="form-control mb-4" name="description"
-							placeholder="Enter description" rows="" required></textarea>
+							placeholder="Enter description" rows="" ></textarea>
 					</div>
 				</div>
 				<div class="control-group col-6 text-left mt-2">

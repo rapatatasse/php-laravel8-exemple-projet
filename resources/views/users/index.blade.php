@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-12 text-center pt-5">
-			<h1 class="display-one m-5">PHP Laravel Project - CRUD</h1>
+			<h1 class="display-one m-5">List users</h1>
 			<div class="text-left"><a href="users/create" class="btn btn-outline-primary">Add new
 				user</a></div>
 
