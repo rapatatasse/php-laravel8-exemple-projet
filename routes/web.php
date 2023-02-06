@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () { return view('welcome');});
 Route::resource('products','App\Http\Controllers\ProductController');
-Route::resource('roles','App\Http\Controllers\RoleController');
+Route::resource('roles','App\Http\Controllers\RoleController')->middleware('App\Http\Middleware\Admin');
 Route::resource('users','App\Http\Controllers\UserController')->middleware('App\Http\Middleware\Admin');
 
 Auth::routes();

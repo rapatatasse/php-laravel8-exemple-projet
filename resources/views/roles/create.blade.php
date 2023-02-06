@@ -8,13 +8,7 @@
 			
 			
 			<form  method="POST" action="{{ route('roles.store') }}" class="border p-3 mt-2">
-				<div class="control-group col-6 text-left">
-					<label for="title">Name</label>
-					<div>
-						<input type="text" id="name" class="form-control mb-4" name="name"
-							placeholder="Enter Name" required>
-					</div>
-				</div>
+				@include('roles/form')
 				
 
 				@csrf

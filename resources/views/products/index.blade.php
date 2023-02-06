@@ -4,7 +4,7 @@
 		<div class="col-12 text-center pt-5">
 			<h1 class="display-one m-5">PHP Laravel Project - CRUD</h1>
 			<div class="text-left"><a href="products/create" class="btn btn-outline-primary">Add new
-				product</a></div>
+				product ({!! $productcount !!})</a></div>
 
 			<table class="table mt-3  text-left">
 				<thead>

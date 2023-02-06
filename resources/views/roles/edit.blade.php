@@ -6,14 +6,7 @@
 			<div class="text-left"><a href="/roles" class="btn btn-outline-primary">role List</a></div>
 
 			<form id="edit-frm" method="POST" action="{{ route('roles.update', $role->id) }}" class="border p-3 mt-2">
-				<div class="control-group col-6 text-left">
-					<label for="title">Name</label>
-					<div>
-						<input type="text" id="name" class="form-control mb-4" name="name"
-							placeholder="Enter Name" value="{!! $role->name !!}"
-							required>
-					</div>
-				</div>
+				@include('roles/form')
 			
 
 				@method('PATCH') 

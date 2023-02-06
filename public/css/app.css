@@ -1,0 +1,18 @@
+
+
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    background-color: #6f6c6c !important;
+}
+.container {
+    background-color: rgb(253, 252, 252);
+    height: 100%;
+    padding: 10px;
+    position: relative;
+} 
+h1 {
+    color: aqua !important;
+}

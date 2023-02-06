@@ -15,7 +15,8 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all(); //fetch all products from DB
-        return view('products.index', ['products' => $products]);
+        $productcount = count($products);
+        return view('products.index', ['products' => $products, 'productcount' => $productcount]);
     }
 
     /**

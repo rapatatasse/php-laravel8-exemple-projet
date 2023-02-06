@@ -52,3 +52,49 @@ php artisan serve
 cours laravel 8 
 https://laravel.sillo.org/cours-laravel-8-les-donnees-migrations-et-modeles/#:~:text=Laravel%20permet%20de%20g%C3%A9rer%20les,Postgres%2C%20SQLite%20et%20SQL%20Server.
 
+
+
+
+
+Envoyer sur heroku
+https://devcenter.heroku.com/articles/getting-started-with-laravel
+
+creation de la clef :
+php artisan key:generate --show
+copie de  la clef sur artisan : 
+heroku config:set APP_KEY=
+
+
+
+creation de la base de donnée :
+
+
+https://www.youtube.com/watch?v=EyEn5gREn_U
+https://www.doabledanny.com/Deploy-PHP-And-MySQL-to-Heroku
+
+heroku addons:create heroku-mysql:?????? --app savapp
+heroku addons:create heroku-postgresql:????? --app savapp
+
+
+Configurer le database.php pour mettre les valiable de la base de données et mettre la base de donnée en utf8.
+
+
+heroku run php artisan migrate	--app savapp
+
+heroku pg:info  (pour voir le nom de la basez en ligne le nom doit être identique dur database.php)
+
+si erreure :
+heroku logs -remote heroku -tail
+
+
+
+
+si lors du lancement du site  :
+Not Found
+The requested URL was not found on this server.
+
+ajouter dans composer.json  ceci :
+        "post-install-cmd": [
+            "php artisan clear-compiled",
+            "chmod -R 777 public/"
+        ],
